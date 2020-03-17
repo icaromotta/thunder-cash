@@ -36,9 +36,20 @@ export class LoginComponent implements OnInit {
     }
 
     this.authService.login(this.loginForm.value).subscribe((access: any) => {
+
+      if(access.ok === false) {
+        Swal.fire(
+          'Acesso negado',
+          access.error,
+          'error'
+        )
+        return false
+      }
+
       localStorage.setItem('token', access.token);
       this.router.navigateByUrl('/');
       this.loginForm.reset();
+      
     }, (err) => {
       Swal.fire(
         'Acesso negado',
