@@ -1,0 +1,39 @@
+<div class="card">
+  <h5 class="card-header">Cadastro</h5>
+  <div class="card-body">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="inputName">Nome</label>
+        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name.errors.required">Nome é necessário</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputCpf">CPF</label>
+        <input type="text" formControlName="cpf" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.cpf.errors }">
+        <div *ngIf="submitted && f.cpf.errors" class="invalid-feedback">
+          <div *ngIf="f.cpf.errors.required">CPF é necessário</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">E-mail</label>
+        <input type="email" formControlName="email" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">E-mail é necessário</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Senha</label>
+        <input type="password" formControlName="password" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Senha é obrigatória</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+  </div>
+</div>
