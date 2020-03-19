@@ -1,1 +1,53 @@
-<p class="container mt-5">dashboard works!</p>
+<div class="container mt-5">
+  <form [formGroup]="salesForm" (ngSubmit)="onSubmit()" style="background-color: aquamarine; padding: 2%">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCode">Código da venda</label>
+        <input type="number" formControlName="saleCode" placeholder="#" class="form-control">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputValue">Valor da venda</label>
+
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">R$</div>
+          </div>
+          <input type="text" formControlName="saleValue" appCurrencyMask class="form-control">
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputDate">Data da venda</label>
+        <input type="date" formControlName="saleDate" class="form-control">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+  </form>
+
+  <!-- My cashbacks -->
+  <div class="mt-3">
+    <div class="mb-3">
+
+      <input class="form-control mb-3" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="#000000, R$, %">
+       
+      <div class="row">
+
+        <div class="col-md-4 mb-2" *ngFor="let cashback of cashbacks$ | filter:searchText">
+          <div
+            style="background-color: aqua; display: flex; flex-direction: row; justify-content: space-between; padding: 2%">
+            <div class="mr-4">
+              <h5>#{{cashback.saleCode}}</h5>
+              <p style="font-size: 2.5em;">R$ {{cashback.saleValue}}</p>
+              <p>{{cashback.saleDate| date}}</p>
+            </div>
+            <div style="text-align: end">
+              <h5>Em validação</h5>
+              <p style="font-size: 2.0em;">{{cashback.refundPercentage}}</p>
+              <p style="font-size: 1.5em;">R${{cashback.cashbackValue}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

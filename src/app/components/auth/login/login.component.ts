@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(this.loginForm.value).subscribe((access: any) => {
 
+      // TODO: chenge strategy to token conference
       if(access.ok === false) {
         Swal.fire(
           'Acesso negado',
@@ -45,11 +46,12 @@ export class LoginComponent implements OnInit {
         )
         return false
       }
-
-      localStorage.setItem('token', access.token);
+    
+      localStorage.setItem('token', access.token)
+      localStorage.setItem('userId', access.userId)
       this.router.navigateByUrl('/');
       this.loginForm.reset();
-      
+
     }, (err) => {
       Swal.fire(
         'Acesso negado',

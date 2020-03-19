@@ -18,7 +18,7 @@ export class AuthService {
   private authenticatedUser: boolean = false
 
   constructor(private router: Router,
-    private http: HttpClient) { }
+              private http: HttpClient) { }
 
   signup(data: any) {
     return this.http.post<UserInterface>(`${this.API}register`, data)
@@ -29,6 +29,7 @@ export class AuthService {
   }
 
   setSession(authResult: { token: string; }) {
+    
     localStorage.setItem('token', authResult.token);
     this.router.navigate(['/']);
     this.loggedEmitter.emit(true);
