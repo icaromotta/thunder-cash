@@ -2,25 +2,27 @@
 
     form {
 
-        background-color: #93E88D; 
+        background-color: aliceblue; 
         padding: 2%; 
         color: darkslateblue;
         font-weight: bold;
-        border: darkslateblue solid 2px;
+        // border: darkslateblue solid 2px;
 
         input {
-            border: darkslateblue solid 2px;
+            // border: azure solid 2px;
+            border-radius: 0%;
         }
 
         button {
             background-color: darkslateblue;
             border-radius: 0%;
-            border-color: darkslateblue;
+            color: aliceblue;
+            border-color: azure;
         }
     }
 
     .cashback-search {
-        border: darkslateblue solid 2px;
+        // border: darkslateblue solid 2px;
         border-radius: 0%;
     }
 

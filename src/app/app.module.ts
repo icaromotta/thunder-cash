@@ -14,6 +14,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CurrencyMaskDirective } from './directives/currency-mask.directive';
 import { FilterPipe } from './pipes/filter.pipe';
 
+import { NgxMaskModule } from 'ngx-mask'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot()
   ],
   exports: [
     CurrencyMaskDirective
