@@ -27,7 +27,7 @@
     <div class="mb-3">
       <input class="cashback-search form-control mb-3" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="#000000, R$, %">
       <div class="row">
-        <div class="col-md-4 mb-2" *ngFor="let cashback of cashbacks$ | filter:searchText">
+        <div class="col-md-4 mb-2" *ngFor="let cashback of cashbacks | filter:searchText">
           <div class="cashback-card" [ngClass]="{ 'disapproved': cashback.status === 'Reprovado', 'approved': cashback.status === 'Aprovado', 'inValidation': cashback.status === 'Em validação' }">
             <div class="mr-4">
               <h5>#{{cashback.saleCode}}</h5>

@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
 
   public salesForm: FormGroup
   public searchForm: FormGroup
-  public cashbacks$: Observable<CashbackInterface[]>
+  public cashbacks = []
   public searchText: string
 
   constructor(private formBuilder: FormBuilder,
@@ -35,8 +35,8 @@ export class DashboardComponent implements OnInit {
   listAllCashbacks() {
 
     this.cashbackService.allCashback(localStorage.getItem('userId'))
-      .subscribe((result) => {
-        this.cashbacks$ = result.cashback
+      .subscribe((result: any) => {
+        this.cashbacks = result.cashback
       })
   }
 
