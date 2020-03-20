@@ -14,9 +14,9 @@
       </li>
     </ul>
 
-    <a class="nav-link" [routerLink]="['/login']">ENTRAR <span class="sr-only"></span></a>
-    <a class="nav-link" [routerLink]="['/register']">CRIAR CONTA <span class="sr-only"></span></a>
-
+    <a class="nav-link" [routerLink]="['/login']" *ngIf="!showLoggedComponents">ENTRAR <span class="sr-only"></span></a>
+    <a class="nav-link" [routerLink]="['/register']" *ngIf="!showLoggedComponents">CRIAR CONTA <span class="sr-only"></span></a>
+    <button type="submit" class="btn btn-outline-info" (click)="signOut()" *ngIf="showLoggedComponents">Sair</button>
   </div>
 </nav>
 

@@ -1,6 +1,50 @@
+.cashback {
+
+    form {
+
+        background-color: #93E88D; 
+        padding: 2%; 
+        color: darkslateblue;
+        font-weight: bold;
+        border: darkslateblue solid 2px;
+
+        input {
+            border: darkslateblue solid 2px;
+        }
+
+        button {
+            background-color: darkslateblue;
+            border-radius: 0%;
+            border-color: darkslateblue;
+        }
+    }
+
+    .cashback-search {
+        border: darkslateblue solid 2px;
+        border-radius: 0%;
+    }
+
+    .cashback-card {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        padding: 2%
+    }
+}
+
 
 
 p, h1,h2,h3,h4,h5,h6 {
     margin: 0%;
     padding: 0%;
+}
+
+.disapproved {
+    background-color: #E8978D;
+}
+.approved {
+    background-color: #8DE895;
+}
+.inValidation {
+    background-color: #8DCFE8;
 }

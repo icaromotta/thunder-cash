@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   submitted = false;
 
   constructor(private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private router: Router) { }
+              private authService: AuthService,
+              private router: Router) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -47,8 +47,8 @@ export class LoginComponent implements OnInit {
         return false
       }
     
-      localStorage.setItem('token', access.token)
-      localStorage.setItem('userId', access.userId)
+      // localStorage.setItem('token', access.token)
+      // localStorage.setItem('userId', access.userId)
       this.router.navigateByUrl('/');
       this.loginForm.reset();
 

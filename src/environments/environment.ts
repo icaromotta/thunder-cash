@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API: 'http://localhost:3000/'
+  API: 'https://powerful-basin-11701.herokuapp.com/'
 };
 
 /*
