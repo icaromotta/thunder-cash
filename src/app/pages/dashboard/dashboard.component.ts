@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
   listAllCashbacks() {
 
     this.cashbackService.allCashback(localStorage.getItem('userId'))
-      .subscribe((result: any) => {
+      .subscribe((result) => {
         this.cashbacks$ = result.cashback
       })
   }
