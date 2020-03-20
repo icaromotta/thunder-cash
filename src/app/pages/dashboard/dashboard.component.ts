@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
 
   public salesForm: FormGroup
   public searchForm: FormGroup
-  public cashbacks$: Observable<any>
+  public cashbacks$: Observable<CashbackInterface[]>
   public searchText: string
 
   constructor(private formBuilder: FormBuilder,

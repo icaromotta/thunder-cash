@@ -16,7 +16,7 @@
 
     <a class="nav-link" [routerLink]="['/login']" *ngIf="!showLoggedComponents">ENTRAR <span class="sr-only"></span></a>
     <a class="nav-link" [routerLink]="['/register']" *ngIf="!showLoggedComponents">CRIAR CONTA <span class="sr-only"></span></a>
-    <button type="submit" class="btn btn-outline-info" (click)="signOut()" *ngIf="showLoggedComponents">Sair</button>
+    <button type="submit" class="btn btn-light" (click)="signOut()" *ngIf="showLoggedComponents">SAIR</button>
   </div>
 </nav>
 

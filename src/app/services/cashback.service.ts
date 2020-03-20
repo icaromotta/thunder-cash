@@ -10,7 +10,7 @@ import { environment } from './../../environments/environment';
 export class CashbackService {
 
   private readonly API = `${environment.API}cashbacks/`;
-
+  
   constructor(private http: HttpClient) { }
 
   addCashback(data: CashbackInterface) {
@@ -18,6 +18,8 @@ export class CashbackService {
   }
 
   allCashback(userId: any) {
+
+    console.log(`${this.API}`)
 
     return this.http.get<any>(`${this.API}?userId=${userId}`)
   }
