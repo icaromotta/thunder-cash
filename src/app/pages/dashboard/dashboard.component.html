@@ -2,11 +2,11 @@
   <form [formGroup]="salesForm" (ngSubmit)="onSubmit()">
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputCode">CÓDIGO DE VENDA</label>
+        <label for="inputCode">CÓDIGO</label>
         <input type="number" formControlName="saleCode" placeholder="#" class="form-control">
       </div>
       <div class="form-group col-md-2">
-        <label for="inputValue">VALOR DE VENDA</label>
+        <label for="inputValue">TOTAL</label>
         <div class="input-group mb-2">
           <div class="input-group-prepend">
             <div class="input-group-text">R$</div>
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="form-group col-md-4">
-        <label for="inputDate">DATA DE VENDA</label>
+        <label for="inputDate">DATA</label>
         <input type="date" formControlName="saleDate" class="form-control">
       </div>
     </div>
@@ -32,7 +32,7 @@
           <div class="cashback-card"
             [ngClass]="{ 'disapproved': cashback.status === 'Reprovado', 'approved': cashback.status === 'Aprovado', 'inValidation': cashback.status === 'Em validação' }">
 
-            <ul style="list-style: none; display: inline; width: 100%; padding: 0%; margin: 0%;">
+            <ul style="list-style: none; width: 100%; padding: 0%; margin: 0%;">
               <li style="display: flex; flex-direction: row; justify-content: space-between; font-size: 1.2em; align-items: center;">
                 <span>#{{cashback.saleCode}}</span><span>{{cashback.status}}</span>
               </li>
