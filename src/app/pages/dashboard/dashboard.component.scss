@@ -1,52 +1,111 @@
 .cashback {
 
-    form {
+  margin: 0% 5%;
 
-        background-color: aliceblue; 
-        padding: 2%; 
-        color: darkslateblue;
-        font-weight: bold;
-        // border: darkslateblue solid 2px;
+  .cashback-sale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 
-        input {
-            // border: azure solid 2px;
-            border-radius: 0%;
-        }
+    .sale-value {
+      font-size: 2.0em;
+    }
+  }
 
-        button {
-            background-color: darkslateblue;
-            border-radius: 0%;
-            color: aliceblue;
-            border-color: azure;
-        }
+  .cashback-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  form {
+
+    background-color: aliceblue;
+    padding: 2%;
+    color: darkslateblue;
+    font-weight: bold;
+    // border: darkslateblue solid 2px;
+
+    input {
+      // border: azure solid 2px;
+      border-radius: 0%;
     }
 
-    .cashback-search {
-        // border: darkslateblue solid 2px;
-        border-radius: 0%;
+    button {
+      background-color: darkslateblue;
+      border-radius: 0%;
+      color: aliceblue;
+      border-color: azure;
     }
+  }
 
-    .cashback-card {
-        display: flex; 
-        flex-direction: row; 
-        justify-content: space-between; 
-        padding: 2%
-    }
+  .cashback-search {
+    // border: darkslateblue solid 2px;
+    border-radius: 0%;
+  }
+
+  .cashback-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2%;
+
+  }
 }
 
-
-
-p, h1,h2,h3,h4,h5,h6 {
-    margin: 0%;
-    padding: 0%;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0%;
+  padding: 0%;
 }
 
 .disapproved {
-    background-color: #E8978D;
+  background-color: #E8978D;
 }
+
 .approved {
-    background-color: #8DE895;
+  background-color: #8DE895;
 }
+
 .inValidation {
-    background-color: #8DCFE8;
+  background-color: #8DCFE8;
+}
+
+@media (min-width: 1041px) {
+
+  .cashback {
+
+    margin: 0% 5%;
+
+    .cashback-card {
+
+      .cashback-sale {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+  
+        .sale-value {
+          font-size: 2em;
+        }
+      }
+  
+      .cashback-show {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        
+      }
+    }
+  }
 }
