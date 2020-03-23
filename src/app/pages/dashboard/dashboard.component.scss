@@ -2,24 +2,6 @@
 
   margin: 0% 5%;
 
-  .cashback-sale {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    .sale-value {
-      font-size: 2.0em;
-    }
-  }
-
-  .cashback-show {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
   form {
 
     background-color: aliceblue;
@@ -27,6 +9,12 @@
     color: darkslateblue;
     font-weight: bold;
     // border: darkslateblue solid 2px;
+
+    .input-group-text {
+      border-radius: 0;
+      background-color: darkslateblue;
+      color: #fff
+    }
 
     input {
       // border: azure solid 2px;
@@ -41,17 +29,54 @@
     }
   }
 
-  .cashback-search {
-    // border: darkslateblue solid 2px;
-    border-radius: 0%;
-  }
+  .cashback-list {
 
-  .cashback-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2%;
+    .cashback-search {
+      // border: darkslateblue solid 2px;
+      border-radius: 0%;
+    }
 
+    .cashback-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2%;
+
+      ul {
+        list-style: none;
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+        color: #2E4053;
+
+        li:nth-child(1) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 1.2em;
+          align-items: center;
+        }
+
+        li:nth-child(2) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 1.5em;
+          align-items: center;
+        }
+
+        li:nth-child(3) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -84,28 +109,6 @@ h6 {
 
     margin: 0% 5%;
 
-    .cashback-card {
-
-      .cashback-sale {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-  
-        .sale-value {
-          font-size: 2em;
-        }
-      }
-  
-      .cashback-show {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 100%;
-        
-      }
-    }
+    .cashback-card {}
   }
 }

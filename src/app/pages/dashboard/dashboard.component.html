@@ -23,7 +23,7 @@
   </form>
 
   <!-- cashbacks -->
-  <div class="mt-3">
+  <div class="mt-3 cashback-list">
     <div class="mb-3">
       <input class="cashback-search form-control mb-3" type="text" name="search" [(ngModel)]="searchText"
         autocomplete="off" placeholder="#000000, R$, %">
@@ -32,35 +32,24 @@
           <div class="cashback-card"
             [ngClass]="{ 'disapproved': cashback.status === 'Reprovado', 'approved': cashback.status === 'Aprovado', 'inValidation': cashback.status === 'Em validação' }">
 
-            <ul style="list-style: none; width: 100%; padding: 0%; margin: 0%;">
-              <li style="display: flex; flex-direction: row; justify-content: space-between; font-size: 1.2em; align-items: center;">
+            <ul>
+              <li>
                 <span>#{{cashback.saleCode}}</span><span>{{cashback.status}}</span>
               </li>
-              <li style="display: flex; flex-direction: row; justify-content: space-between; font-size: 1.5em; align-items: center;">
+              <li>
                 <p class="sale-value"> <strong>R$ {{cashback.saleValue}}</strong></p>
                 <p>{{cashback.refundPercentage}}</p>
               </li>
-              <li style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+              <li>
                 <p>{{cashback.saleDate | date}}</p>
-                <p style="font-size: 1.2em;"><strong>R${{cashback.cashbackValue}}</strong></p>
+                <p><strong>R${{cashback.cashbackValue}}</strong></p>
               </li>
             </ul>
-
-            <!-- <div class="mr-4 cashback-sale">
-              <p>#{{cashback.saleCode}}</p>
-              <p class="sale-value"> <strong style="font-size: 0.5em;">R$</strong> {{cashback.saleValue}}</p>
-              <p>{{cashback.saleDate | date}}</p>
-            </div>
-
-            <div class="cashback-show">
-              <p>{{cashback.status}}</p>
-              <p style="font-size: 2.0em;">{{cashback.refundPercentage}}</p>
-              <p style="font-size: 1.5em;"><strong style="font-size: 0.5em;">R$</strong> {{cashback.cashbackValue}}</p>
-            </div> -->
-
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
+
